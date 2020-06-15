@@ -12,13 +12,12 @@ export const getWeatherData = (city) => async dispatch => {
             'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
             'Access-Control-Max-Age': '86400',
             'X-RapidAPI-Host': 'community-open-weather-map.p.rapidapi.com',
-            'X-RapidAPI-Key': 'a2983e55a1msh42a1684acfbe63ep158363jsn5b9215e47340'
+            'X-RapidAPI-Key': '22448d5b45msh658d58b2b9c2e5ap1d9391jsn6d818e63b5f9'
         }
     }
-
     try {
-        const res = await axios.get(`https://community-open-weather-map.p.rapidapi.com/find?type=link%252C%20accurate&units=imperial%252C%20metric&q=${city}`, config)
-        // console.log(res)
+        const res = await axios.get(`https://community-open-weather-map.p.rapidapi.com/weather?id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=${city}`, config)
+        console.log(res.data)
         dispatch({
             type: GET_WEATHER_DATA,
             payload: res.data

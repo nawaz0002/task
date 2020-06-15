@@ -339,6 +339,13 @@ nav a{
   .signup-img{
     width: 220px;
   }
+  .signin-img{
+    width: 220px;
+  }
+  .signup-container,
+  .signin-container{
+    padding: 1rem 1rem;
+  }
   .sidenav-trigger{
     color: black;
     display: block
@@ -388,6 +395,18 @@ nav a{
 }
 @media(max-width: 320px){
   .signup-img{
+    width: 220px;
+  }
+  .sigup-input-container{
+    padding: 0 0.5rem;
+  }
+  .signup-container,
+  .signin-container{
+    width: 90%;
+    padding: 1rem 0;
+  }
+
+  .signin-img{
     width: 220px;
   }
   .signup-container{
